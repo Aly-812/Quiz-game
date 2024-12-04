@@ -1,4 +1,3 @@
-#Domende da 1 a 3
 messaggio_benvenuto = """
 Benvenuto nel quiz di Phyton. Il quiz si compone di 5 domande.
 Per ogni domanda potrai scegliere tra quattro opzioni. Inserisci il numero della risposta che reputi corretta.

@@ -1,0 +1,13 @@
+Domande mancanti: 
+
+Domanda 4: Quale di questi non è un metodo?
+len()
+variabile.upper()
+variabile.title()
+variabile.
+
+Domanda 5: Quale di questa è una lista?
+mylist = [1,2,"ciao"]
+mylist = {1,2,"ciao"}
+mylist = {"ciao":1, "hola":2}
+my list = ("ciao", "hola", 1)

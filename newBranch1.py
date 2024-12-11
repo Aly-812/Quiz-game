@@ -14,8 +14,7 @@ while True:
     risposta_1 = input("Quale di questi valori rappresenta un valore bool?\n1. ON e OFF \n2. 1 e 0 \n3. True e False \n4. true e false\n")
     if  risposta_1 == "esc":
         print("Arrivederci")
-        break
-        
+        break   
     elif risposta_1 == "3":
         print("La risposta è corretta\n")
         Contatore_punteggio += 1
@@ -41,3 +40,26 @@ while True:
         Contatore_punteggio += 1
     else:
         print("Risposta sbagliata, i valori numerici non sono mai tra virgolette\n")
+
+    risposta_4 = input("Quale di questi non è un metodo?\n1. len(variabile) \n2. variabile.upper() \n3. variabile.title() \n4. variabile.capitalize()\n")
+    if  risposta_4 == "esc":
+        print("Arrivederci")
+        break
+    elif risposta_4 == "1":
+         print("La risposta è corretta\n")
+    Contatore_punteggio += 1
+    else:
+        print("Risposta sbagliata, len(variabile) non è un metodo, ma una funzione\n")
+
+    risposta_5 = input("Quale di questa è una lista?\n1. mylist = {1,2,'ciao'} \n2. mylist = [1,2,'ciao'] \n3. mylist = {'ciao':1, 'hola':2} \n4. my list = ('ciao', 'hola', 1)\n")
+    if  risposta_5 == "esc":
+        print("Arrivederci")
+        break
+    elif risposta_5 == "2":
+        print("La risposta è corretta\n")
+    Contatore_punteggio += 1
+    else:
+        print("Risposta sbagliata, mylist = [1,2,'ciao'] è una lista\n")
+
+
+print(f'Il punteggio che hai totalizzato è: {Contatore_punteggio}')

@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 def quiz():
     messaggio_benvenuto = """
     Benvenuto nel quiz di Python. Il quiz si compone di 5 domande.
@@ -25,6 +27,7 @@ def quiz():
         0: "Mi dispiace ma hai fallito il test non hai risposto correttamente a nessuna domanda\n" + chr(0x1F616)*5
     }
 
+    global contatore_punteggio
     contatore_punteggio = 0
 
     for domanda, opzioni in domande.items():
@@ -53,5 +56,26 @@ def quiz():
 
     print(f'Il punteggio che hai totalizzato è: {contatore_punteggio}')
     print(messaggi_punteggio[contatore_punteggio])
+    giuste = contatore_punteggio
+    return giuste
 
 quiz()
+
+def grafico_a_torta(giuste, sbagliate):
+    
+    etichette = 'Risposte Giuste', 'Risposte Sbagliate'
+    dimensioni = [giuste, sbagliate]
+    colori = ['green', 'red']
+    esplosione = (0.1, 0)  # solo "esplodere" la fetta delle risposte giuste
+
+    fig1, ax1 = plt.subplots()
+    ax1.pie(dimensioni, explode=esplosione, labels=etichette, colors=colori, autopct='%1.1f%%',
+            shadow=True, startangle=90)
+    ax1.axis('equal')  # Assegna l'equilibrio di proporzione
+
+    plt.title('Risultati Quiz')
+    plt.show()
+
+giuste = contatore_punteggio
+sbagliate = 5 - int(contatore_punteggio)
+grafico_a_torta(giuste, sbagliate)

@@ -10,6 +10,9 @@ def quiz():
     """
     print(messaggio_benvenuto)
 
+    #creo un dizionario con le domande come key e una tupla con le varie opzioni come value
+    #l'ultimo valore della tupla corrisponde alla risposta corretta
+    
     domande = {
         "Quale di questi valori rappresenta un valore bool?": ("1. ON e OFF", "2. 1 e 0", "3. True e False", "4. true e false", "3"),
         "Come si esegue un'operazione di elevamento a potenza?": ("1. **", "2. *", "3. %", "4. //", "1"),
@@ -27,6 +30,7 @@ def quiz():
         0: "Mi dispiace ma hai fallito il test non hai risposto correttamente a nessuna domanda\n" + chr(0x1F616)*5
     }
 
+    #comando global per poter utilizzare variabile nella funzione seguente
     global contatore_punteggio
     contatore_punteggio = 0
 
@@ -34,6 +38,7 @@ def quiz():
         print(domanda)
         for opzione in opzioni[:-1]:
             print(opzione)
+    #opzioni[-1] ti consente di stampare le opaioni senza la risposta che è l'ultimo elemento della tupla
         
         while True:
             try:
@@ -41,6 +46,7 @@ def quiz():
                 if risposta == "esc":
                     print("Arrivederci")
                     return
+                #return ti permette di interropere la funzione
                 risposta = int(risposta)
                 if risposta < 1 or risposta > 4:
                     print("Per favore inserisci un numero tra 1 e 4.")
